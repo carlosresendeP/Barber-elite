@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 export const Button = styled.button`
-  background: ${({ theme, $variant }) => 
-    $variant === 'outline' ? 'transparent' : theme.colors.secondary};
-  color: ${({ theme, $variant }) => 
-    $variant === 'outline' ? theme.colors.secondary : theme.colors.primary};
+  background: ${({ theme, $variant }) =>
+        $variant === 'outline' ? 'transparent' : theme.colors.secondary};
+  color: ${({ theme, $variant }) =>
+        $variant === 'outline' ? theme.colors.secondary : theme.colors.primary};
   border: 2px solid ${({ theme }) => theme.colors.secondary};
   padding: ${({ $size }) => $size === 'large' ? '1rem 3rem' : '0.8rem 2rem'};
   font-size: ${({ $size }) => $size === 'large' ? '1.1rem' : '1rem'};
@@ -16,10 +16,10 @@ export const Button = styled.button`
   letter-spacing: 1px;
 
   &:hover {
-    background: ${({ theme, $variant }) => 
-      $variant === 'outline' ? theme.colors.secondary : theme.colors.primary};
-    color: ${({ theme, $variant }) => 
-      $variant === 'outline' ? theme.colors.primary : theme.colors.secondary};
+    background: ${({ theme, $variant }) =>
+        $variant === 'outline' ? theme.colors.secondary : theme.colors.primary};
+    color: ${({ theme, $variant }) =>
+        $variant === 'outline' ? theme.colors.primary : theme.colors.secondary};
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
   }

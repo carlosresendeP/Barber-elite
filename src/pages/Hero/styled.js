@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import { FaWhatsapp } from 'react-icons/fa';
-import { Button } from '../components/StyledComponents';
+import { Button } from '../../components/Common';
 
-const HeroSection = styled.section`
+export const HeroSection = styled.section`
   position: relative;
   height: 100vh;
   display: flex;
@@ -36,7 +35,7 @@ const HeroSection = styled.section`
   }
 `;
 
-const HeroContent = styled.div`
+export const HeroContent = styled.div`
   position: relative;
   z-index: 3;
   max-width: 900px;
@@ -55,7 +54,7 @@ const HeroContent = styled.div`
   }
 `;
 
-const HeroTitle = styled.h1`
+export const HeroTitle = styled.h1`
   font-size: 4rem;
   color: ${({ theme }) => theme.colors.white};
   margin-bottom: 1rem;
@@ -76,7 +75,7 @@ const HeroTitle = styled.h1`
   }
 `;
 
-const HeroSubtitle = styled.p`
+export const HeroSubtitle = styled.p`
   font-size: 1.5rem;
   color: ${({ theme }) => theme.colors.gray.light};
   margin-bottom: 2.5rem;
@@ -91,14 +90,14 @@ const HeroSubtitle = styled.p`
   }
 `;
 
-const HeroButtons = styled.div`
+export const HeroButtons = styled.div`
   display: flex;
   gap: 1.5rem;
   justify-content: center;
   flex-wrap: wrap;
 `;
 
-const WhatsAppButton = styled(Button)`
+export const WhatsAppButton = styled(Button)`
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -107,39 +106,3 @@ const WhatsAppButton = styled(Button)`
     font-size: 1.5rem;
   }
 `;
-
-const Hero = () => {
-  return (
-    <HeroSection id="inicio">
-      <HeroContent>
-        <HeroTitle>
-          Seu estilo <span>começa aqui</span>
-        </HeroTitle>
-        <HeroSubtitle>
-          Experiência premium em cuidados masculinos com profissionais especializados
-        </HeroSubtitle>
-        <HeroButtons>
-          <WhatsAppButton
-            as="a"
-            href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar um horário."
-            target="_blank"
-            rel="noopener noreferrer"
-            $size="large"
-          >
-            <FaWhatsapp />
-            Agendar Horário
-          </WhatsAppButton>
-          <Button
-            $variant="outline"
-            $size="large"
-            onClick={() => document.getElementById('servicos').scrollIntoView({ behavior: 'smooth' })}
-          >
-            Nossos Serviços
-          </Button>
-        </HeroButtons>
-      </HeroContent>
-    </HeroSection>
-  );
-};
-
-export default Hero;
